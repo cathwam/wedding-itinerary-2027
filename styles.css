@@ -1,0 +1,118 @@
+:root {
+  --ivory: #f6f0e9;
+  --paper: #fbf7f2;
+  --plum: #3c2831;
+  --muted: #77656d;
+  --rose: #caa5a8;
+  --line: rgba(60, 40, 49, .2);
+  --serif: Georgia, 'Times New Roman', serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ivory); color: var(--plum); font-family: var(--serif); font-size: 17px; line-height: 1.7; }
+a { color: inherit; }
+.nav { width: min(1180px, calc(100% - 48px)); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.monogram { text-decoration: none; font-size: 1.25rem; letter-spacing: .18em; }
+.monogram span { color: var(--rose); }
+.nav-links { display: flex; gap: 32px; margin-left: auto; margin-right: 34px; }
+.nav-links a { text-decoration: none; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; }
+.language-switch { display: flex; border: 1px solid var(--line); }
+.language-switch button { appearance: none; border: 0; border-right: 1px solid var(--line); background: transparent; color: var(--muted); padding: 7px 9px; font: 600 .67rem/1 Georgia, serif; letter-spacing: .08em; cursor: pointer; }
+.language-switch button:last-child { border-right: 0; }
+.language-switch button[aria-pressed="true"] { background: var(--plum); color: var(--ivory); }
+.language-switch button:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+.hero { min-height: 92vh; text-align: center; display: flex; flex-direction: column; align-items: center; background: radial-gradient(circle at 50% 38%, #fffaf5 0, var(--ivory) 62%); }
+.hero .botanical { margin-top: auto; }
+.botanical { color: var(--muted); letter-spacing: .22em; font-size: 1.1rem; }
+.eyebrow, .section-number { margin: 20px 0 8px; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 12px 0; text-transform: uppercase; font-weight: 400; letter-spacing: .22em; font-size: clamp(2.3rem, 7vw, 5.7rem); line-height: 1.18; }
+h1 span { display: block; margin: 18px 0 14px; font-size: .26em; letter-spacing: .05em; }
+.date { margin: 24px 0; letter-spacing: .26em; font-size: .85rem; }
+.button { margin: 20px 0 auto; padding: 14px 34px; min-width: 220px; background: var(--plum); color: white; text-decoration: none; text-transform: uppercase; letter-spacing: .15em; font-size: .76rem; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); background: #563946; }
+section { padding: 110px max(24px, calc((100vw - 1180px) / 2)); }
+h2 { margin: 10px 0 26px; font-weight: 400; line-height: 1.15; font-size: clamp(2.2rem, 5vw, 4.6rem); letter-spacing: .02em; }
+.intro { text-align: center; max-width: 920px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.intro > p:not(.section-number) { max-width: 690px; margin: 0 auto; color: var(--muted); }
+.route { margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 12px 18px; }
+.route span { letter-spacing: .16em; font-size: .9rem; }
+.route i { color: var(--muted); font-size: .76rem; }
+.route b { font-weight: 400; color: var(--rose); }
+.art { padding: 0; overflow: hidden; }
+.art img { width: 100%; display: block; max-height: 520px; object-fit: cover; }
+.wedding { display: grid; grid-template-columns: .72fr 1.28fr; gap: 8vw; align-items: center; background: var(--paper); }
+.wedding-date { border: 1px solid var(--line); min-height: 440px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--ivory); }
+.wedding-date span { font-size: .75rem; letter-spacing: .22em; }
+.wedding-date strong { font-size: clamp(6rem, 12vw, 10rem); font-weight: 400; line-height: 1; margin: 18px; }
+.wedding-copy h2 { margin-bottom: 8px; }
+.time { letter-spacing: .12em; font-size: .82rem; }
+address { font-style: normal; margin: 24px 0; color: var(--muted); }
+.wedding-copy > p:last-of-type { max-width: 660px; }
+.text-link { display: inline-block; margin-top: 14px; text-underline-offset: 5px; }
+.itinerary { background: var(--plum); color: var(--ivory); }
+.itinerary .section-number, .itinerary .lead { color: #cdbfc4; }
+.lead { max-width: 720px; color: var(--muted); }
+.days { margin-top: 64px; border-top: 1px solid rgba(246,240,233,.25); }
+.day { display: grid; grid-template-columns: 145px 1fr; gap: 38px; padding: 42px 0; border-bottom: 1px solid rgba(246,240,233,.2); }
+.day-date { display: flex; flex-direction: column; }
+.day-date span { letter-spacing: .18em; font-size: .7rem; color: #cdbfc4; }
+.day-date strong { font-size: 1.6rem; font-weight: 400; }
+.city { margin: 0 0 6px; color: #d6aeb0; letter-spacing: .2em; font-size: .7rem; }
+.day h3 { margin: 0 0 12px; font-size: 1.6rem; font-weight: 400; }
+.day p { margin: 0 0 14px; max-width: 740px; color: #e0d7d8; }
+.day ul { margin: 0; padding-left: 1.1em; color: #d7cbce; }
+.day em { color: #d6aeb0; }
+.wedding-day-card { background: rgba(202,165,168,.09); margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+.recommendations { text-align: center; }
+.recommendations .lead { margin: 0 auto; }
+.city-grid { margin-top: 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+.city-grid article { padding: 38px; border: 1px solid var(--line); background: var(--paper); }
+.city-grid article.featured { background: #e8dbd7; transform: translateY(-14px); }
+.city-grid article > span { color: var(--rose); font-size: .75rem; letter-spacing: .2em; }
+.city-grid h3 { margin: 8px 0 30px; font-weight: 400; font-size: 2.2rem; }
+.city-grid h4 { margin: 22px 0 6px; font-size: .7rem; letter-spacing: .2em; }
+.city-grid p { color: var(--muted); }
+.practical { background: #e8dbd7; display: grid; grid-template-columns: .75fr 1.25fr; gap: 7vw; }
+.practical-grid { display: grid; gap: 30px; }
+.practical-grid article { border-top: 1px solid rgba(60,40,49,.25); padding-top: 22px; display: grid; grid-template-columns: 38px 1fr; column-gap: 18px; }
+.practical-grid strong { grid-row: span 2; font-weight: 400; color: var(--rose); }
+.practical-grid h3 { margin: 0; font-weight: 400; font-size: 1.25rem; }
+.practical-grid p { margin: 6px 0 0; color: var(--muted); }
+footer { padding: 90px 24px; text-align: center; background: var(--paper); }
+.footer-names { font-size: 2rem; letter-spacing: .1em; margin: 22px 0 8px; }
+footer > p:not(.footer-names) { color: var(--muted); }
+footer a { display: inline-block; margin-top: 20px; text-underline-offset: 5px; }
+
+@media (max-width: 800px) {
+  body { font-size: 16px; }
+  .nav { width: calc(100% - 32px); }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: .62rem; }
+  .hero { min-height: 84vh; }
+  section { padding: 78px 22px; }
+  .art { padding: 0; }
+  .art img { height: 300px; object-position: center; }
+  .wedding, .practical { grid-template-columns: 1fr; }
+  .wedding-date { min-height: 310px; }
+  .day { grid-template-columns: 1fr; gap: 14px; padding: 34px 0; }
+  .day-date { flex-direction: row; gap: 14px; align-items: baseline; }
+  .city-grid { grid-template-columns: 1fr; }
+  .city-grid article.featured { transform: none; }
+}
+
+@media (max-width: 520px) {
+  .nav { flex-wrap: wrap; gap: 14px; }
+  .nav-links { order: 3; width: 100%; margin: 0; justify-content: center; }
+  .language-switch { margin-left: auto; }
+  .nav-links a:nth-child(3) { display: none; }
+  h1 { letter-spacing: .13em; }
+  .route { flex-direction: column; align-items: center; }
+  .route b { transform: rotate(90deg); }
+  .city-grid article { padding: 30px 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
